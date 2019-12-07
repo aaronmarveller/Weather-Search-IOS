@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherSearch/controller/WeatherController.swift"
+            timestampString = "596103396.706201"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "6"
+            endingLineNumber = "6"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherSearch/controller/WeatherController.swift"
+            timestampString = "596103396.706579"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "7"
+            endingLineNumber = "7"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "WeatherSearch/view/ThirdSubView.swift"
+            timestampString = "596974393.999761"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeatherSearch.ThirdSubView.__allocating_init(style: __C.UITableViewCellStyle, reuseIdentifier: Swift.Optional&lt;Swift.String&gt;) -&gt; WeatherSearch.ThirdSubView"
+                  moduleName = "WeatherSearch"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liupeiyuan/Library/Autosave%20Information/WeatherSearch/WeatherSearch/view/ThirdSubView.swift"
+                  timestampString = "596946135.359381"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeatherSearch.ThirdSubView.init(style: __C.UITableViewCellStyle, reuseIdentifier: Swift.Optional&lt;Swift.String&gt;) -&gt; WeatherSearch.ThirdSubView"
+                  moduleName = "WeatherSearch"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liupeiyuan/Library/Autosave%20Information/WeatherSearch/WeatherSearch/view/ThirdSubView.swift"
+                  timestampString = "596946135.368609"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "57">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeatherSearch.ThirdSubView.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;WeatherSearch.ThirdSubView&gt;"
+                  moduleName = "WeatherSearch"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liupeiyuan/Library/Autosave%20Information/WeatherSearch/WeatherSearch/view/ThirdSubView.swift"
+                  timestampString = "596946135.370625"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeatherSearch.ThirdSubView.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;WeatherSearch.ThirdSubView&gt;"
+                  moduleName = "WeatherSearch"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liupeiyuan/Library/Autosave%20Information/WeatherSearch/WeatherSearch/view/ThirdSubView.swift"
+                  timestampString = "596946135.372599"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "50">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "WeatherSearch.ThirdSubView.__deallocating_deinit"
+                  moduleName = "WeatherSearch"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/liupeiyuan/Library/Autosave%20Information/WeatherSearch/WeatherSearch/view/ThirdSubView.swift"
+                  timestampString = "596946135.374511"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="sfn-Zt-pPn">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search Result View Controller-->
+        <scene sceneID="96X-52-i0g">
+            <objects>
+                <viewController id="jDo-Hu-FXc" customClass="SearchResultViewController" customModule="WeatherSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OqD-A9-055">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background1" translatesAutoresizingMaskIntoConstraints="NO" id="V7L-JC-7C6">
+                                <rect key="frame" x="0.0" y="88" width="375" height="724"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="48c-Kg-KDw">
+                                <rect key="frame" x="45" y="138" width="295" height="183"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="sendData:" destination="jDo-Hu-FXc" eventType="touchUpInside" id="KLy-3t-rv7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J3U-uE-fVM">
+                                <rect key="frame" x="329" y="100" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="plus-circle"/>
+                                <connections>
+                                    <action selector="addFav:" destination="jDo-Hu-FXc" eventType="touchUpInside" id="Tgo-Lw-3He"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zte-C8-dm9">
+                                <rect key="frame" x="329" y="99" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="trash-can"/>
+                                <connections>
+                                    <action selector="addFav:" destination="jDo-Hu-FXc" eventType="touchUpInside" id="cVe-ea-XnP"/>
+                                    <action selector="remvFav:" destination="jDo-Hu-FXc" eventType="touchUpInside" id="V1o-8Q-jET"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rra-Bc-fO2">
+                                <rect key="frame" x="36" y="474" width="303" height="260"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="layer.backgroundColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="0.49523758559999997" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="jDo-Hu-FXc" id="I7U-wJ-QOf"/>
+                                    <outlet property="delegate" destination="jDo-Hu-FXc" id="B9g-Ka-xWl"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="sSy-LC-eek"/>
+                    </view>
+                    <connections>
+                        <outlet property="addFavBtn" destination="J3U-uE-fVM" id="qA0-AG-Zz0"/>
+                        <outlet property="button" destination="48c-Kg-KDw" id="3rp-0R-2qW"/>
+                        <outlet property="remvFavBtn" destination="Zte-C8-dm9" id="XMi-dH-hCe"/>
+                        <outlet property="thirdSubView" destination="rra-Bc-fO2" id="7rV-D1-KlQ"/>
+                        <segue destination="JDx-kd-KKI" kind="show" identifier="resultToDetailSegue" id="bTK-bk-TSx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LC7-rb-hGP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3661.5999999999999" y="-715.27093596059115"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="CurrentLocation" id="BYZ-38-t0r" customClass="MainViewController" customModule="WeatherSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Enter City Name..." translatesAutoresizingMaskIntoConstraints="NO" id="yx5-0O-pjp">
+                                <rect key="frame" x="0.0" y="44" width="375" height="56"/>
+                                <color key="barTintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background1" translatesAutoresizingMaskIntoConstraints="NO" id="mYZ-7i-a28">
+                                <rect key="frame" x="0.0" y="100" width="375" height="712"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLm-BA-bBv">
+                                <rect key="frame" x="45" y="138" width="295" height="183"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="sendData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y2a-mw-8va"/>
+                                </connections>
+                            </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="NKa-yB-Odo">
+                                <rect key="frame" x="162.66666666666666" y="731" width="50" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="7Wo-Qd-BNy"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="BKY-cL-lFb"/>
+                                </constraints>
+                            </pageControl>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N13-8Y-bip">
+                                <rect key="frame" x="0.0" y="100" width="375" height="712"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="N13-8Y-bip" secondAttribute="bottom" id="2ir-PA-HRX"/>
+                            <constraint firstItem="N13-8Y-bip" firstAttribute="top" secondItem="mYZ-7i-a28" secondAttribute="top" id="3DD-Qf-GZ9"/>
+                            <constraint firstAttribute="bottom" secondItem="N13-8Y-bip" secondAttribute="bottom" id="3Qo-S4-4Di"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NKa-yB-Odo" secondAttribute="bottom" constant="10" id="5Ki-Ni-yc6"/>
+                            <constraint firstItem="N13-8Y-bip" firstAttribute="trailing" secondItem="mYZ-7i-a28" secondAttribute="trailing" id="Bq8-Ki-uYR"/>
+                            <constraint firstItem="N13-8Y-bip" firstAttribute="trailing" secondItem="yx5-0O-pjp" secondAttribute="trailing" id="D9I-Rp-5t0"/>
+                            <constraint firstItem="NKa-yB-Odo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DNb-aS-xjF"/>
+                            <constraint firstItem="N13-8Y-bip" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Esa-WK-qrp"/>
+                            <constraint firstItem="N13-8Y-bip" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="FxH-ks-jsI"/>
+                            <constraint firstItem="N13-8Y-bip" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="100" id="MST-j5-0Ag"/>
+                            <constraint firstItem="N13-8Y-bip" firstAttribute="top" secondItem="yx5-0O-pjp" secondAttribute="bottom" id="Uir-Y8-QyJ"/>
+                            <constraint firstItem="N13-8Y-bip" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VfL-2I-ybq"/>
+                            <constraint firstItem="N13-8Y-bip" firstAttribute="bottom" secondItem="mYZ-7i-a28" secondAttribute="bottom" id="atA-Jb-5aX"/>
+                            <constraint firstAttribute="trailing" secondItem="N13-8Y-bip" secondAttribute="trailing" id="fJh-kU-pth"/>
+                            <constraint firstItem="N13-8Y-bip" firstAttribute="leading" secondItem="mYZ-7i-a28" secondAttribute="leading" id="k6X-W0-pWd"/>
+                            <constraint firstItem="N13-8Y-bip" firstAttribute="top" secondItem="yx5-0O-pjp" secondAttribute="bottom" id="pKt-Pw-aqE"/>
+                            <constraint firstItem="N13-8Y-bip" firstAttribute="leading" secondItem="yx5-0O-pjp" secondAttribute="leading" id="r9D-g9-muY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jzO-aX-tEJ"/>
+                    <connections>
+                        <outlet property="button" destination="VLm-BA-bBv" id="aF1-xV-xcG"/>
+                        <outlet property="pageControl" destination="NKa-yB-Odo" id="zHu-Nv-5xx"/>
+                        <outlet property="scrollView" destination="N13-8Y-bip" id="OWv-Ds-CUR"/>
+                        <outlet property="searchBar" destination="yx5-0O-pjp" id="WRV-KU-qOf"/>
+                        <segue destination="JDx-kd-KKI" kind="show" identifier="toDetailSegue" id="Nod-oc-Yb6"/>
+                        <segue destination="jDo-Hu-FXc" kind="show" identifier="toResultSegue" id="vXf-gc-Zfb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2880.8000000000002" y="27.339901477832512"/>
+        </scene>
+        <!--WEEKLY-->
+        <scene sceneID="ud2-Wf-mHY">
+            <objects>
+                <viewController id="mwX-ii-5R0" customClass="WeeklyViewController" customModule="WeatherSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kRH-a0-19Z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="TWf-ZA-U66"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="WEEKLY" image="trending-up" id="XGc-QX-OfB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z8b-wY-gX9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3926" y="814"/>
+        </scene>
+        <!--TODAY-->
+        <scene sceneID="JZ7-vk-tIO">
+            <objects>
+                <viewController id="cqn-EY-N6i" customClass="TodayViewController" customModule="WeatherSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="goq-0b-T7u">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="8G4-rO-Cnp"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="TODAY" image="calendar-today" id="Eyq-t0-0dO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pO0-mN-Rm3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3066" y="814"/>
+        </scene>
+        <!--PHOTOS-->
+        <scene sceneID="hA1-v1-pm3">
+            <objects>
+                <viewController id="5mE-rU-IVR" customClass="PhotosViewController" customModule="WeatherSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j4Y-Va-Ha5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ZEk-2V-RCw"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="PHOTOS" image="ios-photos" id="5yw-9s-mO1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tMh-Oe-oWg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4793" y="814"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="VWy-at-1Na">
+            <objects>
+                <tabBarController id="JDx-kd-KKI" customClass="DetailViewController" customModule="WeatherSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Rdq-lz-VwW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="cqn-EY-N6i" kind="relationship" relationship="viewControllers" id="So4-1B-1rG"/>
+                        <segue destination="mwX-ii-5R0" kind="relationship" relationship="viewControllers" id="ZsV-rI-JJO"/>
+                        <segue destination="5mE-rU-IVR" kind="relationship" relationship="viewControllers" id="Gfn-M9-D7o"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ale-D4-WcL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3926" y="28"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wrF-D1-rIN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sfn-Zt-pPn" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SA6-kP-YuY">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="EEZ-iB-cX4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fzB-BL-juP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1938.4000000000001" y="27.339901477832512"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background1" width="972" height="1458"/>
+        <image name="calendar-today" width="28" height="28"/>
+        <image name="ios-photos" width="28" height="28"/>
+        <image name="plus-circle" width="30" height="30"/>
+        <image name="trash-can" width="30" height="30"/>
+        <image name="trending-up" width="28" height="28"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="bTK-bk-TSx"/>
+    </inferredMetricsTieBreakers>
+</document>
